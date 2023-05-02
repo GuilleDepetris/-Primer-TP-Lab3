@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: rgb(221, 218, 218);
+    font-family: 'Merriweather', serif;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(118, 118, 255);
+}
+.Ing-usuario{
+    height: 2vw;
+    border: 0px;
+    border-radius: 13px;
+    font-size: 80%;
+    font-family: 'Merriweather', serif; 
+    margin-right: 3vw;
+}
+.logo{
+    margin:1% 0% 1% 4%;
+    height: 3vw;
+}
+.contenedor{
+    height: min-content;
+    width: 90%;
+    max-width: 1400px;
+    margin: 5% 5%;
+    /*Arriba,der, abajo, izq */
+    display: grid;
+    gap: 1%;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+
+    grid-template-areas:
+                        "datos datos datos"
+                        "publicacion publicacion sobremi"
+                        "publicacion publicacion  .";
+}
+.FotoPerfil{
+    width: 15vw;
+    border-radius: 100%;
+    border-width: 4px;
+    padding: 3px;
+    border-style: solid;
+    border-color: rgb(82, 82, 255);
+}
+.contenedor >div,
+.Datos-Perfil,
+.contenedor .Publicacion,
+.contenedor .Sobre mi{
+    background-color: #fff;
+    padding: 20px;
+}
+.Datos-Perfil{
+    
+    grid-area: datos;
+}
+.Publicacion {
+    grid-area: publicacion;
+}
+.Sobre-mi{
+    grid-area: sobremi;
+}
