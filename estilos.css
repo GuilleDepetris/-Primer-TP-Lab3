@@ -146,6 +146,11 @@ p,h2,h3,h4{
 .Comentarios{
     margin-left: 1rem;
 }
+a{
+    font-family: 'Roboto Slab', serif;
+    text-decoration: none;
+    color: black;
+}
 
 
 
