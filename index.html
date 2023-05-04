@@ -8,11 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
     <title>Gb-Jane Done</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header">
         <img src="PerfilJane/logo.png" class="logo" alt="Logo de la Pagina">  
-        <input type="text" class="Ing-usuario" placeholder="Ingresa tu usuario..">    
+        <form>
+        <input type="text" id="Txtusuario" placeholder="Ingresa tu usuario.."required="">
+        <input type="button" id="BtnUsuario" value="Ingresar" onclick="guardarNombre()">
+        </form>
+
     </header>
     <div class="contenedor">
         <div class="Datos-Perfil">
@@ -26,7 +31,8 @@
             <p class="trabajando">Trabajando en <b>Lawn N</b></p>  
           </div>  
           <div class="DivBtnSeguir">  
-            <input class="botonSeguir" type="button" value="Seguir">
+            <p class="seguidores"> <b>1200</b> seguidores <br> <b>875</b> seguidos</p>
+            <input id="botonSeguir" type="button" value="Seguir" onclick="cambiarValor()" >
           </div> 
           
         </div>
@@ -35,13 +41,18 @@
             <h4 class="FechaPublic">Publicado hace 1 semana</h4>
             <img src="PerfilJane/publicacion.jpg" class="ImagenPublic" alt="Publicacion">
             <br>
-            <input class="BtnMeGusta" type="button" value="Me Gusta">
-          <div class="Comentarios">
+            <div class="Megusta-Likes">
+            <input id="BtnMeGusta" type="button" value="Me Gusta" onclick="darLike()">
+            <p class="likes"><b>200</b> likes</p>
+            </div>
+          <div class="Comentarios" id="coments">
             <h3>Comentarios</h3>
             <p><a href="juanperez.html" target="_blank">Juan Perez</a> ¡Wow, esa foto en Tokio es imprecionante!</p>
             <p><a href="kathleen.html" target="_blank">Kathleen J Rennie</a> ¡Esta foto en Tokio es simplemente espectacular! Me trae tantos recuerdos.</p>
-            <input class="TxtComentar" type="text" placeholder="Deja tu comentario...">
-            <input class="BtnComentar"type="button" value="Comentar">
+        <form>
+            <input id="TxtComentar" type="text" placeholder="Deja tu comentario...">
+            <input id="BtnComentar"type="button" value="Comentar">
+        </form>
           </div>
         </section>
         
