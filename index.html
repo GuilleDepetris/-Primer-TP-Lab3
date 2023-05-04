@@ -14,7 +14,7 @@
     <header class="header">
         <img src="PerfilJane/logo.png" class="logo" alt="Logo de la Pagina">  
         <form>
-        <input type="text" id="Txtusuario" placeholder="Ingresa tu usuario.."required="">
+        <input type="text" id="Txtusuario" placeholder="Ingresa tu usuario..">
         <input type="button" id="BtnUsuario" value="Ingresar" onclick="guardarNombre()">
         </form>
 
@@ -33,8 +33,7 @@
           <div class="DivBtnSeguir">  
             <p class="seguidores"> <b>1200</b> seguidores <br> <b>875</b> seguidos</p>
             <input id="botonSeguir" type="button" value="Seguir" onclick="cambiarValor()" >
-          </div> 
-          
+          </div>      
         </div>
         
         <section class="Publicacion">
@@ -49,7 +48,7 @@
             <h3>Comentarios</h3>
             <p><a href="juanperez.html" target="_blank">Juan Perez</a> ¡Wow, esa foto en Tokio es imprecionante!</p>
             <p><a href="kathleen.html" target="_blank">Kathleen J Rennie</a> ¡Esta foto en Tokio es simplemente espectacular! Me trae tantos recuerdos.</p>
-        <form>
+        <form id="nuevosComentarios">
             <input id="TxtComentar" type="text" placeholder="Deja tu comentario...">
             <input id="BtnComentar"type="button" value="Comentar">
         </form>

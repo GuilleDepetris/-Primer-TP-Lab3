@@ -4,14 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100&family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
     <title>Gb-Juan Perez</title>
     <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="header">
         <img src="PerfilJane/logo.png" class="logo" alt="Logo de la Pagina">  
-        <input type="text" class="Ing-usuario" placeholder="Ingresa tu usuario..">    
+        <form>
+          <input type="text" id="Txtusuario" placeholder="Ingresa tu usuario..">
+          <input type="button" id="BtnUsuario" value="Ingresar" onclick="guardarNombre()">
+          </form>  
     </header>
     <div class="contenedor">
         <div class="Datos-Perfil">
@@ -25,22 +30,28 @@
             <p class="trabajando">Trabajando en <b>EPEM</b></p>  
           </div>  
           <div class="DivBtnSeguir">  
-            <input class="botonSeguir" type="button" value="Seguir">
-          </div>         
+            <p class="seguidores"> <b>1156</b> seguidores <br> <b>8775</b> seguidos</p>
+            <input id="botonSeguir" type="button" value="Seguir" onclick="cambiarValor2()" >
+          </div>        
         </div>
         
         <section class="Publicacion">
             <h4 class="FechaPublic">Publicado hace 1 mes</h4>
             <img src="PerfilJuan/publicacionjuanperez.jpg" class="ImagenPublic" alt="Publicacion">
             <br>
-            <input class="BtnMeGusta" type="button" value="Me Gusta">
-          <div class="Comentarios">
+            <div class="Megusta-Likes">
+              <input id="BtnMeGusta" type="button" value="Me Gusta" onclick="darLike2()">
+              <p class="likes"><b>121</b> likes</p>
+              </div>
+              <div class="Comentarios" id="coments">
             <h3>Comentarios</h3>
             <p><a href="index.html" target="_blank">Jane Doe</a> ¡No sabia que te gustaba leer!</p>
             <p><a href="kathleen.html" target="_blank">Kathleen J Rennie</a> ¡Que cantidad de diarios Juan!</p>
-            <input class="TxtComentar" type="text" placeholder="Deja tu comentario...">
-            <input class="BtnComentar"type="button" value="Comentar">
-          </div>
+            <form id="nuevosComentarios">
+              <input id="TxtComentar" type="text" placeholder="Deja tu comentario...">
+              <input id="BtnComentar"type="button" value="Comentar">
+          </form>
+            </div>
         </section>
         
         <div class="Sobre-mi">
